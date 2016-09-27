@@ -51,3 +51,9 @@ For this reason, images are left off by default. If you turn them on, you'll nee
 To do this, you'll need to provide information for your FTP server within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
 
 Once that's done, just add the value for the `images_url` within the `config.json` file.
+
+### Social Images
+
+If you're using images, the templates can include logos and links for relevant social networks in the footer. If you're not using images, there won't be any social network links. In order for the social images to show up, you'll need to set `use_images` to `true` in the configuration file. Then you can provide the full URL for the social networks you use. For every URL you provide, the image and link will automatically be added. If you leave a social network URL blank, it will simply be ignored.
+
+Finally, there are two versions of the social images for the footer. The first version is just the logos. The second version is circles with the logos cut out. There is a `use_circles` option in the config file as well. If you're only using a few social links, the original logos work best. However, if you have quite a few social networks to include, the logos begin to clash, and it looks better to use the circle versions.
