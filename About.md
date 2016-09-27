@@ -1,8 +1,10 @@
-This is an overview of MailMason to help you understand if it can help you with your application's transactional templates.
+This is an overview of MailMason to help you understand if it can help you with your application's transactional templates. MailMason gives you a couple of options. The simplest and easiest option is to use the generated html and txt templates located in the distribution (`/dist`) folder. These are static files that can be plugged directly into [Postmark's](https://postmarkapp.com) templating feature. However, it's much more powerful...
 
 # What is MailMason?
 
-It's a toolset to streamline building and updating a set of consistent transactional emails. It uses Grunt, Handlebars, and SCSS to streamline building a consistent set of transactional email templates using layouts and partials to reduce redundancy and create both the HTML and plain text versions of your transactional emails in one fell swoop.
+MailMason streamlines building and updating a set of consistent transactional emails. It uses Grunt, Handlebars, and SCSS in conjunction with layouts and partials to reduce redundancy and create both the HTML and plain text versions of your transactional emails in one fell swoop.
+
+MailMason was born out of our desire to have a tool kit for generating a consistent set of transactional email templates for use within [Postmark's](https://postmarkapp.com) templating feature. However, it's something that anyone could take and fork to help them maintain their own set of email templates for Postmark or really any other email provider that offers similar functionality.
 
 By default, the generated templates use [Mustachio](https://github.com/wildbit/mustachio) for the variable placeholders so that you can easily use them as [Postmark](https://postmarkapp.com) templates. However, the Mustachio pieces are only placeholders, and the generated templates could easily be adapted to work with any email provider.
 
