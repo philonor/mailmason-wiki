@@ -30,7 +30,7 @@ You can find the included templates as Handlebars (.hbs) files in the `/src/emai
 1. **Invoice** An email requesting payment for a sale.
 1. **Receipt** An email acknowledging payment for a sale.
 1. **Reset Password** An email including a link for the recipient to securely change their password.
-1. **Reset Password Alt** An email sent to email addresses when they do not exist in the system. You can read [Everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/)For more detailed information on this approach.
+1. **Reset Password Alt** An email sent to email addresses when they do not exist in the system. You can read [everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/) for more detailed information on this approach.
 1. **Trial Expiring** A notification sent in advance of a trial expiring so that a user can take action to avoid an interuption in service.
 1. **Trial Expired** A notification sent after a trial expired providing the recipient with assurances about their data and offering options for next steps.
 1. **Comment Notification** A simple notification that a comment has been made or an action taken.
