@@ -44,13 +44,11 @@ By default, `config.json` is ignored. The base project includes an `example_conf
 
 ### Images & Assets
 
-Postmark doesn't currently provide hosting for images in templates. (It's on our roadmap, though.) So for the time being, if you'd like your emails to use images, you'll need to host these assets somewhere publicly available.
+Postmark doesn't currently provide hosting for images in templates. (It's on our roadmap, though.) So for the time being, if you'd like your emails to use images, you'll need to host these assets somewhere in order for them to show up. In general, we advise a subdomain of your primary domain for the emails. For instance, if you're sending email from `jane@example.com`, a great URL for the email assets would be `assets.example.com`.
 
-For this reason, images are left off by default. If you turn them on, you'll need to upload the relevant images to a publicly available CDN so they can be displayed in the email.
+Since images complicate things, they're off by default. If you turn them on, you'll need to upload the relevant images to a publicly available CDN so they can be displayed in the email. To do this, you'll need to provide information for your FTP server within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
 
-To do this, you'll need to provide information for your FTP server within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
-
-Once that's done, just add the value for the `images_url` within the `config.json` file.
+Once that's done, just add the value for the `images_url` within the `config.json` file. That URL will be used throughout to provide absolute references to the image locations.
 
 ### Social Images
 
