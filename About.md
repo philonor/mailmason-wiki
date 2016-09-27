@@ -20,7 +20,7 @@ By default, the generated templates use [Mustachio](https://github.com/wildbit/m
 
 ## What templates are included?
 
-You can find the included templates as Handlebars (.hbs) files in the `/src/emails` folder. Each of these templates is based off of the advice in our thoroughly researched [Postmark Guides](https://postmarkapp.com/guides). 
+You can find the included templates as Handlebars (.hbs) files in the `/src/emails` folder. Each of these templates is based off of the advice in our thoroughly researched [Postmark Guides](https://postmarkapp.com/guides). These are just the initial templates, we'll definitely be adding more in the future.
 
 1. **Example** A base template designed only to showcase the available elements in the emails and to make it easy to test all of the styles from a single email.
 1. **Welcome** A traditional welcome email when someone new creates an account on your service.
