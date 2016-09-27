@@ -32,13 +32,13 @@ There are two primary configuration files for MailMason: `secrets.json` and `con
 
 If you project is shared among team members, you may want to to update your `.gitignore` to recognize `config.json` so that each member of your team isn't forced to recreate it.
 
-### `secrets.json`
+### Secrets
 
 By design `secrets.json` is ignored so that it's not accidentally committed. The base project includes an `example_secrets.json` that you can copy and rename in order to create your base secrets file. The relevant secrets are documented in the file.
 
 If you're not sending test emails through Postmark and don't want to upload any images to a CDN, you don't have to provide values for these files. 
 
-### `config.json`
+### Configuration
 
 By default, `config.json` is ignored. The base project includes an `example_config.json` that you can copy and rename in order to create your base configuration file. The configuration file lets you set a variety of things like product name, sender name, corporate address, and various other strings. Each section and individual option is documented within the `example_config.json` file.
 
