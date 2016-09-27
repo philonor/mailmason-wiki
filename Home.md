@@ -1,9 +1,8 @@
 Welcome to the MailMason wiki!
 
-* About
-  * What it does do...
-  * What it doesn't do...
-  * Included Templates
+* [About](https://github.com/wildbit/mailmason/wiki/About)
+  * [What can it do?](https://github.com/wildbit/mailmason/wiki/About#what-can-it-do)
+  * [What templates are included?](https://github.com/wildbit/mailmason/wiki/About#what-templates-are-included)
 * Installation & Setup
 * Configuration
   * config.json
