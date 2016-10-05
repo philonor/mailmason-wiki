@@ -1,1 +1,1 @@
-Brought to you by <a href="http://postmarkapp.com"><img src="http://assets.wildbit.com/postmark/misc/postmark.svg" alt="Postmark" style="display: block; margin-top: 2px"></a>
+Brought to you by <a href="http://postmarkapp.com"><img src="http://assets.wildbit.com/postmark/misc/postmark.svg" alt="Postmark" style="vertical-align: middle;"></a>
