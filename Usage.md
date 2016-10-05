@@ -1,6 +1,10 @@
 The repository includes some automation to help with building and testing.  Check out `Gruntfile.js` for more details on how each task works.
 
-## Starting the build daemon
+## Building
+
+Once you've built everything, it's just a bunch of files that all need to be put together, right? This is how it happens.
+
+### Starting the build daemon
 
 In most cases running `npm start` and letting the watcher do the builds for you will get the job done. This will automatically watch for any changes in the relevant Handlebars folders. `emails`, `layouts`, `partials`, and `stylesheets`.
 
@@ -8,7 +12,7 @@ In most cases running `npm start` and letting the watcher do the builds for you 
 npm start
 ```
 
-## Building HTML or CSS
+### Building HTML or CSS
 
 If you ever want to just rebuild the HTML or CSS independently, you can use either of the following.
 
@@ -17,7 +21,7 @@ npm run html
 npm run css
 ```
 
-## Managing Image Assets
+### Managing Image Assets
 
 In order to use images with your email templates in Postmark, you'll need to host the images on a CDN or asset server. Once you've finished with [configuration](https://github.com/wildbit/mailmason/wiki/Getting-Started#configuration), this task will automatically grab your images and FTP them to your asset server.
 
