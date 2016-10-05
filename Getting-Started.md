@@ -51,7 +51,7 @@ If you're not sending test emails through Postmark and don't want to upload any 
 
 By default, `config.json` is ignored. The base project includes an `example_config.json` that you can copy and rename in order to create your base configuration file. The configuration file lets you set a variety of things like product name, sender name, corporate address, and various other strings. Each section and individual option is documented within the `example_config.json` file.
 
-```json
+```javascript
 // Create a copy of this file as 'variables.json'
 
 {
