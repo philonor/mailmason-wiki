@@ -26,6 +26,15 @@ gem install premailer
 gem install nokogiri
 ```
 
+6) Create and edit `config.json` and `secrets.json` (Secrets are only necessary if you want to send test emails.)
+
+7) Start the build service that watches the `src` directory for changes and builds to `dist`.  
+```bash
+npm start
+```
+
+8) Open `preview.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
+
 ## Configuration
 
 There are two primary configuration files for MailMason: `secrets.json` and `config.json`. By default these files are ignored using `.gitignore`. Examples of these files are included at `example_secrets.json` and `example_config.json`. You can copy these files and rename them to create your own. The specific secrets and configurable values are documented within these files.
