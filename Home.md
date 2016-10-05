@@ -16,9 +16,3 @@ Welcome to the MailMason wiki!
   * Stylesheets
   * Templates
 * [Usage](https://github.com/wildbit/mailmason/wiki/Usage)
-  * `npm start`
-  * `npm run html`
-  * `npm run css`
-  * `npm run spamcheck`
-  * `npm run litmus`
-  * `npm run images`
