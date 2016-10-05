@@ -31,6 +31,12 @@ Since MailMason assumes that you're not using images, there's no built-in monito
 npm run images
 ```
 
+## Viewing
+
+When you're working on a dozen different emails that all also need to be responsive and have plain text versions, it can be pretty tedious to reload and check on them all manually, so we've included a `preview.html` file that loads up all of the rendered emails for easy previewing. Of course, you'll still need to test them in Litmus, but this helps with the fundamental development.
+
+
+
 ## Testing
 
 The emails need to look great, right? So you'll have to see them in action? So there are a handful of commands to help you do this. To use these, you'll have to configure Postmark settings in `secrets.json` so you can send the emails.
