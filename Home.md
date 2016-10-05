@@ -11,8 +11,9 @@ Welcome to the MailMason wiki!
     * [Images & Assets](https://github.com/wildbit/mailmason/wiki/Getting-Started#images--assets)
     * [Social Images](https://github.com/wildbit/mailmason/wiki/Getting-Started#social-images)
 * [Project Structure](https://github.com/wildbit/mailmason/wiki/Project-Structure)
-  * Layouts
-  * Partials
-  * Stylesheets
-  * Templates
+  * [Emails](https://github.com/wildbit/mailmason/wiki/Project-Structure#emails)
+  * [Images](https://github.com/wildbit/mailmason/wiki/Project-Structure#images)
+  * [Layouts](https://github.com/wildbit/mailmason/wiki/Project-Structure#layouts)
+  * [Partials](https://github.com/wildbit/mailmason/wiki/Project-Structure#partials)
+  * [Stylesheets](https://github.com/wildbit/mailmason/wiki/Project-Structure#stylesheets)
 * [Usage](https://github.com/wildbit/mailmason/wiki/Usage)
