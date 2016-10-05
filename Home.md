@@ -17,7 +17,7 @@ Welcome to the MailMason wiki!
   * Templates
 * Usage
   * `npm start`
-  * `npn run html`
+  * `npm run html`
   * `npm run css`
   * `npm run spamcheck`
   * `npm run litmus`
