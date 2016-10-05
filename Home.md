@@ -15,7 +15,7 @@ Welcome to the MailMason wiki!
   * Partials
   * Stylesheets
   * Templates
-* Usage
+* [Usage](https://github.com/wildbit/mailmason/wiki/Usage)
   * `npm start`
   * `npm run html`
   * `npm run css`
