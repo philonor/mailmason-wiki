@@ -10,7 +10,7 @@ Welcome to the MailMason wiki!
     * [Config.json](https://github.com/wildbit/mailmason/wiki/Getting-Started#secretsjson)
     * [Images & Assets](https://github.com/wildbit/mailmason/wiki/Getting-Started#images--assets)
     * [Social Images](https://github.com/wildbit/mailmason/wiki/Getting-Started#social-images)
-* Project Structure
+* [Project Structure](https://github.com/wildbit/mailmason/wiki/Project-Structure)
   * Layouts
   * Partials
   * Stylesheets
