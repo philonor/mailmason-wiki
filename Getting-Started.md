@@ -64,3 +64,14 @@ Once that's done, just add the value for the `images_url` within the `config.jso
 If you're using images, the templates can include logos and links for relevant social networks in the footer. If you're not using images, there won't be any social network links. In order for the social images to show up, you'll need to set `use_images` to `true` in the configuration file. Then you can provide the full URL for the social networks you use. For every URL you provide, the image and link will automatically be added. If you leave a social network URL blank, it will simply be ignored.
 
 Finally, there are two versions of the social images for the footer. The first version is just the logos. The second version is circles with the logos cut out. There is a `use_circles` option in the config file as well. If you're only using a few social links, the original logos work best. However, if you have quite a few social networks to include, the logos begin to clash, and it looks better to use the circle versions.
+
+Since the images have to be generated in advance, there's a limit to the social networks with built-in support. Right now, the following social networks are available:
+
+* Twitter
+* Facebook
+* Pinterest
+* Instagram
+* dribbble
+* Google+
+* YouTube
+* LinkedIn
