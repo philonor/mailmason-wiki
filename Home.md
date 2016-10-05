@@ -17,3 +17,5 @@ Welcome to the MailMason wiki!
   * [Partials](https://github.com/wildbit/mailmason/wiki/Project-Structure#partials)
   * [Stylesheets](https://github.com/wildbit/mailmason/wiki/Project-Structure#stylesheets)
 * [Usage](https://github.com/wildbit/mailmason/wiki/Usage)
+  * [Building](https://github.com/wildbit/mailmason/wiki/Usage#building)
+  * [Testing](https://github.com/wildbit/mailmason/wiki/Usage#testing)
