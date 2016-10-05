@@ -47,6 +47,27 @@ By design `secrets.json` is ignored so that it's not accidentally committed. The
 
 If you're not sending test emails through Postmark and don't want to upload any images to a CDN, you don't have to provide values for these files. 
 
+```javascript
+// Create a copy of this file as 'secrets.json'
+
+{
+  "ftp": {
+
+    // If you want to use images in your emails, you'll need to host them
+    // on your own server. There's a grunt task to automatically upload your
+    // images to your asset server via FTP. You would just need to provide
+    // your username and password here.
+    "username": "YOUR_FTP_USERNAME_HERE",
+    "password": "YOUR_FTP_PASSWORD_HERE"
+  },
+  "postmark": {
+    
+    // If you want a way to send yourself test emails through Postmark
+    "server_token": "YOUR_POSTMARK_SERVER_TOKEN_HERE"
+  }
+}
+```
+
 ### Config.json
 
 By default, `config.json` is ignored. The base project includes an `example_config.json` that you can copy and rename in order to create your base configuration file. The configuration file lets you set a variety of things like product name, sender name, corporate address, and various other strings. Each section and individual option is documented within the `example_config.json` file.
