@@ -60,7 +60,7 @@ npm run litmus
 
 ### Send All the Emails
 
-This will send a copy of each email in the `/emails` folder to your testing address. 
+This will send a copy of each email in the `/emails` folder to your personal address. 
 
 **Important:** If you have a lot of templates, this will send a lot of emails to your personal address. Use it wisely.
 
