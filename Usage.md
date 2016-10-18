@@ -54,6 +54,8 @@ npm run spamcheck
 
 If you have a Litmus account, this makes it easier for you to fire off a test email to your [Litmus](https://litmus.com) account. Once you specify the Litmus test email address in `config.json` you're off to the races.
 
+**Important:** This test pulls emails from `dist_test` rather than `dist` because the CSS needs to be inlined to render an accurate test result on Litmus. The `dist_test` contents are generated from `dist` to accurately represent what Postmark would create before sending templates based on the contents of the `dist` folder.
+
 ```bash
 npm run litmus
 ```
