@@ -1,12 +1,8 @@
 There are two key folders for MailMason. The first, where you'll be making changes is the `src` directory. The second, where the final files are generated is `dist`. 
 
-## The Distribution Folder
-
-All of your HTML and text emails will end up here. They are constantly overwritten by the build process, so it's important not to make changes here if you want to keep them. Even though the distribution files are generated, we include them in the repository for easy access to the static results.
-
 ## The Source Folder
 
-The source folder is the home for everything you'll need to edit on a regular basis. It's fairly straightforward.
+The source folder (`/src`) is the home for everything you'll need to edit on a regular basis. It has a fairly straightforward structure:
 
 ```
 /src
@@ -67,3 +63,10 @@ If you have a `masthead.hbs` partial, you could use it in your emails like so...
 
 ### Stylesheets
 
+The stylesheets support SASS, and the pre-existing stylesheets use SCSS syntax with partials. They provide some basic organization and are joined via the `global.scss` file.
+
+## The Distribution Folder
+
+All of your HTML and text emails will end up in the `/dist` folder. They are constantly overwritten by the build process, so it's important not to make changes here if you want to keep them. Even though the distribution files are generated, we include them in the repository for easy access to the static results. These files in the `/dist` folder are what you'd use within Postmark. 
+
+**Note:** There's also a `/test_dist` folder. This folder is primarily for generating versions with the CSS fully-linlined so that Litmus tests are testing the most compatible versions.
