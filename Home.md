@@ -19,3 +19,5 @@ Welcome to the MailMason wiki!
 * [Usage](https://github.com/wildbit/mailmason/wiki/Usage)
   * [Building](https://github.com/wildbit/mailmason/wiki/Usage#building)
   * [Testing](https://github.com/wildbit/mailmason/wiki/Usage#testing)
+* [Development](https://github.com/wildbit/mailmason/wiki/Development)
+* [Templates](https://github.com/wildbit/mailmason/wiki/Templates)
