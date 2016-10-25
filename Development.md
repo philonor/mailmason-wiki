@@ -12,7 +12,7 @@ In order to maintain a high level of compatibility across email clients, the mod
 
 ## Mustachio & Handlebars
 
-Postmark templates use [Mustachio](https://github.com/wildbit/mustachio), our lightweight yet powerful templating engine for C#. However, Mail Mason uses Handlebars for local development. Since Mail Mason ultimately generates Mustachio templates for Postmark, the chances are pretty good that you'll want to include some Mustachio variables in your templates. If you don't escape these variables, Mail Mason will treat them like Handlebars and attempt to parse them.
+Postmark templates use [Mustachio](https://github.com/wildbit/mustachio), our lightweight yet powerful templating engine for C#. However, MailMason uses Handlebars for local development. Since MailMason ultimately generates Mustachio templates for Postmark, the chances are pretty good that you'll want to include some Mustachio variables in your templates. If you don't escape these variables, MailMason will treat them like Handlebars and attempt to parse them.
 
 You can escape values in Handlebars like this:
 
