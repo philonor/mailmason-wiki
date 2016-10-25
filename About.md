@@ -24,13 +24,13 @@ By default, the generated templates use [Mustachio](https://github.com/wildbit/m
 
 You can find the included templates as Handlebars (.hbs) files in the `/src/emails` folder. Each of these templates is based off of the advice in our thoroughly researched [Postmark Guides](https://postmarkapp.com/guides). These are just the initial templates, we'll definitely be adding more in the future.
 
-1. **Example** A base template designed only to showcase the available elements in the emails and to make it easy to test all of the styles from a single email.
-1. **Welcome** A traditional welcome email when someone new creates an account on your service.
-1. **User Invitation** A modified version of the welcome email that's designed when one of your existing users invites a new user, who may not be familiar with your product, to join the product and collaborate.
-1. **Invoice** An email requesting payment for a sale.
-1. **Receipt** An email acknowledging payment for a sale.
-1. **Reset Password** An email including a link for the recipient to securely change their password.
-1. **Reset Password Alt** An email sent to email addresses when they do not exist in the system. You can read [everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/) for more detailed information on this approach.
-1. **Trial Expiring** A notification sent in advance of a trial expiring so that a user can take action to avoid an interuption in service.
-1. **Trial Expired** A notification sent after a trial expired providing the recipient with assurances about their data and offering options for next steps.
-1. **Comment Notification** A simple notification that a comment has been made or an action taken.
+1. **[Example](http://assets.wildbit.com/postmark/templates/#example)** A base template designed only to showcase the available elements in the emails and to make it easy to test all of the styles from a single email.
+1. **[Welcome](http://assets.wildbit.com/postmark/templates/#welcome)** A traditional welcome email when someone new creates an account on your service.
+1. **[User Invitation](http://assets.wildbit.com/postmark/templates/#user_invitation)** A modified version of the welcome email that's designed when one of your existing users invites a new user, who may not be familiar with your product, to join the product and collaborate.
+1. **[Invoice](http://assets.wildbit.com/postmark/templates/#invoice)** An email requesting payment for a sale.
+1. **[Receipt](http://assets.wildbit.com/postmark/templates/#receipt)** An email acknowledging payment for a sale.
+1. **[Password Reset](http://assets.wildbit.com/postmark/templates/#password_reset** An email including a link for the recipient to securely change their password.
+1. **[Password Reset Help](http://assets.wildbit.com/postmark/templates/#password_reset_help)** An email sent to email addresses when they do not exist in the system. You can read [everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/) for more detailed information on this approach.
+1. **[Trial Expiring](http://assets.wildbit.com/postmark/templates/#trial_expiring)** A notification sent in advance of a trial expiring so that a user can take action to avoid an interuption in service.
+1. **[Trial Expired](http://assets.wildbit.com/postmark/templates/#trial_expired)** A notification sent after a trial expired providing the recipient with assurances about their data and offering options for next steps.
+1. **[Comment Notification](http://assets.wildbit.com/postmark/templates/#comment_notification)** A simple notification that a comment has been made or an action taken.
