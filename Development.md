@@ -8,6 +8,10 @@ Each template will generate a desktop-width (800px) and mobile-width (480px) vie
 
 <a href="http://assets.wildbit.com/postmark/templates/"><img src="http://assets.wildbit.com/postmark/templates/docs/preview.png"></a>
 
+Each of the email templates is available from the preview page so that you may quickly scroll through and visually examine both desktop and mobile widths for both the HTML and plain text versions of each email.
+
+<a href="http://assets.wildbit.com/postmark/templates/"><img src="http://assets.wildbit.com/postmark/templates/docs/sample_emails.png"></a>
+
 # Code
 
 In order to maintain a high level of compatibility across email clients, the modules are visually simple, but involve some traditional table hacking. This is a quick list of code samples for quick references. You can see an example of these rendered in the `example.html` template. This template is also the one used for quick visual testing on Litmus.
