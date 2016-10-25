@@ -29,7 +29,7 @@ You can find the included templates as Handlebars (.hbs) files in the `/src/emai
 1. **[User Invitation](http://assets.wildbit.com/postmark/templates/#user_invitation)** A modified version of the welcome email that's designed when one of your existing users invites a new user, who may not be familiar with your product, to join the product and collaborate.
 1. **[Invoice](http://assets.wildbit.com/postmark/templates/#invoice)** An email requesting payment for a sale.
 1. **[Receipt](http://assets.wildbit.com/postmark/templates/#receipt)** An email acknowledging payment for a sale.
-1. **[Password Reset](http://assets.wildbit.com/postmark/templates/#password_reset** An email including a link for the recipient to securely change their password.
+1. **[Password Reset](http://assets.wildbit.com/postmark/templates/#password_reset)** An email including a link for the recipient to securely change their password.
 1. **[Password Reset Help](http://assets.wildbit.com/postmark/templates/#password_reset_help)** An email sent to email addresses when they do not exist in the system. You can read [everything you ever wanted to know about building a secure password reset feature](https://www.troyhunt.com/everything-you-ever-wanted-to-know/) for more detailed information on this approach.
 1. **[Trial Expiring](http://assets.wildbit.com/postmark/templates/#trial_expiring)** A notification sent in advance of a trial expiring so that a user can take action to avoid an interuption in service.
 1. **[Trial Expired](http://assets.wildbit.com/postmark/templates/#trial_expired)** A notification sent after a trial expired providing the recipient with assurances about their data and offering options for next steps.
