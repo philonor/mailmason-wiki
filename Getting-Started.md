@@ -10,30 +10,25 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | b
 nvm install && nvm use
 ```
 
-3) Install Grunt CLI globally
-```bash
-npm install -g grunt-cli
-```
-
-4) Install local dependencies
+3) Install local dependencies
 ```bash
 npm install
 ```
 
-5) Install premailer and nokogiri gems
+4) Install premailer and nokogiri gems
 ```bash
 gem install premailer
 gem install nokogiri
 ```
 
-6) Create and edit `config.json` and `secrets.json` (Secrets are only necessary if you want to send test emails.)
+5) Create and edit `config.json` and `secrets.json` (Secrets are only necessary if you want to send test emails.)
 
-7) Start the build service that watches the `src` directory for changes and builds to `dist`.  
+6) Start the build service that watches the `src` directory for changes and builds to `dist`.  
 ```bash
 npm start
 ```
 
-8) Open `preview.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
+7) Open `preview.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
 
 ## Configuration
 
