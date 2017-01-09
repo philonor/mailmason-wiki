@@ -55,6 +55,12 @@ If you're not sending test emails through Postmark and don't want to upload any 
     "username": "YOUR_FTP_USERNAME_HERE",
     "password": "YOUR_FTP_PASSWORD_HERE"
   },
+  "s3": {
+    // If you'd prefer to store your images on Amazon S3, add your account
+    // credentials here.
+    "access_key_id": "YOUR_ACCESS_KEY_ID_HERE",
+    "secret_access_key": "YOUR_SECRET_ACCESS_KEY_HERE"
+  }
   "postmark": {
     
     // If you want a way to send yourself test emails through Postmark
@@ -172,6 +178,12 @@ By default, `config.json` is ignored. The base project includes an `example_conf
     // The target directory where the files should be uplaoded on your asset
     // server
     "dest": "/example/images"   
+  },
+
+  "s3": {
+    "bucket": "",
+    "region": "",
+    "overwrite": true
   }  
 }
 ```
