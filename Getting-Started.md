@@ -56,6 +56,7 @@ If you're not sending test emails through Postmark and don't want to upload any 
     "password": "YOUR_FTP_PASSWORD_HERE"
   },
   "s3": {
+
     // If you'd prefer to store your images on Amazon S3, add your account
     // credentials here.
     "access_key_id": "YOUR_ACCESS_KEY_ID_HERE",
@@ -180,9 +181,16 @@ By default, `config.json` is ignored. The base project includes an `example_conf
     "dest": "/example/images"   
   },
 
+  // To store your images on Amazon S3, add your bucket name and region here.
   "s3": {
-    "bucket": "",
-    "region": "",
+
+    // The name of your S3 bucket.
+    "bucket": "bucket-name",
+
+    // The region in which the bucket is located.
+    "region": "us-east-1",
+
+    // Overwrite any existing files with the same name.
     "overwrite": true
   }  
 }
