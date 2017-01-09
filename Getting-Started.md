@@ -180,9 +180,13 @@ By default, `config.json` is ignored. The base project includes an `example_conf
 
 Postmark doesn't currently provide hosting for images in templates. (It's on our roadmap, though.) So for the time being, if you'd like your emails to use images, you'll need to host these assets somewhere in order for them to show up. In general, we advise a subdomain of your primary domain for the emails. For instance, if you're sending email from `jane@example.com`, a great URL for the email assets would be `assets.example.com`.
 
-Since images complicate things, they're off by default. If you turn them on, you'll need to upload the relevant images to a publicly available CDN so they can be displayed in the email. To do this, you'll need to provide information for your FTP server within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
+Since images complicate things, they're off by default. If you turn them on, you'll need to upload the relevant images to a publicly available CDN so they can be displayed in the email. To do this, you'll need to provide information for your FTP server or Amazon S3 bucket.
 
-Once that's done, just add the value for the `images_url` within the `config.json` file. That URL will be used throughout to provide absolute references to the image locations.
+To upload your assets to an **FTP server**, add your server details within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
+
+Alternatively, you can upload your images to an **Amazon S3** bucket. You'll need to add your Access Key ID and Secret Access Key to the `secrets.json` file. Once that's sorted, go ahead and add your bucket name and region to the `config.json` file.
+
+To finish up, just add the value for the `images_url` within the `config.json` file. That URL will be used throughout to provide absolute references to the image locations.
 
 ### Social Images
 
