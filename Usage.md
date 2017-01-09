@@ -23,12 +23,20 @@ npm run css
 
 ### Managing Image Assets
 
-In order to use images with your email templates in Postmark, you'll need to host the images on a CDN or asset server. Once you've finished with [configuration](https://github.com/wildbit/mailmason/wiki/Getting-Started#configuration), this task will automatically grab your images and FTP them to your asset server.
+In order to use images with your email templates in Postmark, you'll need to host the images on a CDN or asset server. Once you've finished with [configuration](https://github.com/wildbit/mailmason/wiki/Getting-Started#configuration), these tasks will automatically grab your images and upload them to your FTP server or Amazon S3 bucket.
 
 Since MailMason assumes that you're not using images, there's currently no built-in monitoring for changes to image files. When you change images, you'll need to explicitly update them on your asset server when you make changes locally. 
 
+To upload images to an **FTP server** use the `images:ftp` task.
+
 ```bash
-npm run images
+npm run images:ftp
+```
+
+To upload images to an **Amazon S3** bucket use the `images:s3` task.
+
+```bash
+npm run images:s3
 ```
 
 ## Viewing
