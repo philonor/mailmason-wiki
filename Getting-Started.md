@@ -28,7 +28,7 @@ gem install nokogiri
 npm start
 ```
 
-7) Open `preview.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
+7) Open `previews.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
 
 ## Configuration
 
