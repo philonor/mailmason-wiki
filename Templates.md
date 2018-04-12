@@ -73,7 +73,7 @@ Notify users of new comments by other users.
 
 ### Trial expiration
 
-[Trial expiration email best pracitces](https://postmarkapp.com/guides/trial-expiration-email-best-practices)
+[Trial expiration email best practices](https://postmarkapp.com/guides/trial-expiration-email-best-practices)
 
 #### Trial Expiring
 
