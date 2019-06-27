@@ -61,7 +61,7 @@ If you're not sending test emails through Postmark and don't want to upload any 
     // credentials here.
     "access_key_id": "YOUR_ACCESS_KEY_ID_HERE",
     "secret_access_key": "YOUR_SECRET_ACCESS_KEY_HERE"
-  }
+  },
   "postmark": {
     
     // If you want a way to send yourself test emails through Postmark
