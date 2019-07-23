@@ -22,13 +22,13 @@ Upgrading to the latest version can get pretty tricky depending on whether you'v
 
 ### 🎨Stylesheets
 
-1. From your old MailMason folder, copy `src/stylesheets` to the new project folder
-2. Delete any compiled stylesheet(.css) files in `/src/stylesheets` since they will now be compiled to `dist/stylesheets`
+1. From your old MailMason folder, copy `/src/stylesheets` to the new project folder
+2. Delete any compiled stylesheet(.css) files in `/src/stylesheets` since they will now be compiled to `/dist/stylesheets`
 3. Run `npm run css` to ensure that the stylesheets are being compiled properly
 
 ### 📘Layouts
-1. From your old MailMason folder, copy the layouts from `src/layouts` to the new project folder. The folder structure has changed in `1.0`, so be sure to follow the new conventions.
-    * Each layout is stored in its own folder. e.g. `src/layouts/plain/content.hbs`
+1. From your old MailMason folder, copy the layouts from `/src/layouts` to the new project folder. The folder structure has changed in `1.0`, so be sure to follow the new conventions.
+    * Each layout is stored in its own folder. e.g. `/src/layouts/plain/content.hbs`
     * Layout file is named `content.hbs`
     * Layouts must have a `meta.json` file in the same folder so that they can be uploaded to Postmark. The metadata file must follow this structure: 
         ```json
@@ -38,11 +38,11 @@ Upgrading to the latest version can get pretty tricky depending on whether you'v
           "TemplateType": "Layout"
         }
         ```
-2. Now that the compiled CSS is stored in `dist/stylesheets`, you will need to update the stylesheet path in your layout to use the new relative path. e.g. `../../stylesheets/global.css?__inline=true`
+2. Now that the compiled CSS is stored in `/dist/stylesheets`, you will need to update the stylesheet path in your layout to use the new relative path. e.g. `../../stylesheets/global.css?__inline=true`
 
 ### 📄Templates
-1. From your old MailMason folder, copy the templates from `src/emails` to `src/templates` in the new project folder. Similar to layouts, the template folder structure has changed in `1.0`. Be sure to follow the new convention. 
-    * Each template is stored in its own folder. e.g. `src/templates/welcome/content.hbs`
+1. From your old MailMason folder, copy the templates from `/src/emails` to `/src/templates` in the new project folder. Similar to layouts, the template folder structure has changed in `1.0`. Be sure to follow the new convention. 
+    * Each template is stored in its own folder. e.g. `/src/templates/welcome/content.hbs`
     * Template file is named `content.hbs`
     * All templates must have a `meta.json` file in the same folder so that they can be uploaded to Postmark. The metadata file must follow this structure:
         ```json
@@ -54,7 +54,13 @@ Upgrading to the latest version can get pretty tricky depending on whether you'v
           "LayoutTemplate": "your-layout-alias"
         }
         ```
-2. Now that the layout folder structure has changed, you will need to update your templates to reference the new layout. Open up your template files and update the layout path found in the Handlebars config up top. e.g. `layout: your-layout/your-layout.hbs`
+2. Now that the layout folder structure has changed, you will need to update your templates to reference the new layout. Open up your template files and update the layout path found in the YAML front matter.
+
+```yaml
+---
+layout: your-layout/content.hbs
+---
+```
 
 ### 🧪Testing
 1. Ensure that everything is set up properly by running `npm run build`. Check the console output to see if the Grunt tasks are executing properly.
