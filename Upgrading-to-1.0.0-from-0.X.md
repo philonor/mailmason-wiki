@@ -56,11 +56,11 @@ Upgrading to the latest version can get pretty tricky depending on whether you'v
         ```
 2. Now that the layout folder structure has changed, you will need to update your templates to reference the new layout. Open up your template files and update the layout path found in the YAML front matter.
 
-```yaml
----
-layout: your-layout/content.hbs
----
-```
+    ```yaml
+    ---
+    layout: your-layout/content.hbs
+    ---
+    ```
 
 ### 🧪Testing
 1. Ensure that everything is set up properly by running `npm run build`. Check the console output to see if the Grunt tasks are executing properly.
