@@ -2,7 +2,7 @@
 
 1) Install [node version manager](https://github.com/creationix/nvm)
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 2) Install and use node version specified from `.nvmrc`.
@@ -32,9 +32,9 @@ npm start
 
 ## Configuration
 
-There are two primary configuration files for MailMason: `secrets.json` and `config.json`. By default these files are ignored using `.gitignore`. Examples of these files are included at `example_secrets.json` and `example_config.json`. You can copy these files and rename them to create your own. The specific secrets and configurable values are documented within these files.
+There are two primary configuration files for MailMason: `secrets.json` and `config.json`. By default, these files are ignored using `.gitignore`. Examples of these files are included at `example_secrets.json` and `example_config.json`. You can copy these files and rename them to create your own. The specific secrets and configurable values are documented within these files.
 
-If your project is shared among team members, you may want to to update your `.gitignore` to recognize `config.json` so that each member of your team isn't forced to recreate it.
+If your project is shared among team members, you may want to update your `.gitignore` to recognize `config.json` so that each member of your team isn't forced to recreate it.
 
 ### Create secrets.json (Optional)
 
@@ -202,7 +202,7 @@ Postmark doesn't currently provide hosting for images in templates. (It's on our
 
 Since images complicate things, they're off by default. If you turn them on, you'll need to upload the relevant images to a publicly available CDN so they can be displayed in the email. To do this, you'll need to provide information for your FTP server or Amazon S3 bucket.
 
-To upload your assets to an **FTP server**, add your server details within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to  the specified directory on your FTP server.
+To upload your assets to an **FTP server**, add your server details within `config.json` and provide the username and password for the FTP server in `secrets.json`. Once that's complete, you'll be able to upload all images from `/src/images` to the specified directory on your FTP server.
 
 Alternatively, you can upload your images to an **Amazon S3** bucket. You'll need to add your Access Key ID and Secret Access Key to the `secrets.json` file. Once that's sorted, go ahead and add your bucket name and region to the `config.json` file.
 
@@ -212,7 +212,7 @@ To finish up, just add the value for the `images_url` within the `config.json` f
 
 If you're using images, the templates can include logos and links for relevant social networks in the footer. If you're not using images, there won't be any social network links. In order for the social images to show up, you'll need to set `use_images` to `true` in the configuration file. Then you can provide the full URL for the social networks you use. For every URL you provide, the image and link will automatically be added. If you leave a social network URL blank, it will simply be ignored.
 
-Finally, there are two versions of the social images for the footer. The first version is just the logos. The second version is circles with the logos cut out. There is a `use_circles` option in the config file as well. If you're only using a few social links, the original logos work best. However, if you have quite a few social networks to include, the logos begin to clash, and it looks better to use the circle versions.
+Finally, there are two versions of the social images for the footer. The first version is just the logos. The second version are circles with the logos cut out. There is a `use_circles` option in the config file as well. If you're only using a few social links, the original logos work best. However, if you have quite a few social networks to include, the logos begin to clash, and it looks better to use the circle versions.
 
 <img src="http://assets.wildbit.com/postmark/templates/docs/social_icons.png">
 
