@@ -3,7 +3,7 @@ Upgrading to the latest version can get pretty tricky depending on whether you'v
 🚨**Attention!** 🚨This guide assumes a few things:
 - You have an existing project that uses a previous version of MailMason's workflow
 - You are using the default Grunt workflow that shipped with previous versions of MailMason. If you've made a bunch of changes to the tasks or targets in your Gruntfile.js, you will need to improvise.
-- You find the latest improvements in the [v1.0.0 release notes](#) useful. If that's a no, then it's not worth upgrading.
+- You find the latest improvements in the [v1.0.0 release notes](https://github.com/wildbit/mailmason/releases/tag/v1.0.0) useful. If that's a no, then it's not worth upgrading.
 
 
 ***
