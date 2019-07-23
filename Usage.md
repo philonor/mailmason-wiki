@@ -6,7 +6,7 @@ Once you've built everything, it's just a bunch of files that all need to be put
 
 ### Starting the build daemon
 
-In most cases running `npm start` and letting the watcher do the builds for you will get the job done. This will automatically watch for any changes in the relevant Handlebars folders. `emails`, `layouts`, `partials`, and `stylesheets`.
+In most cases running `npm start` and letting the watcher do the builds for you will get the job done. This will automatically watch for any changes in the relevant Handlebars folders. `templates`, `layouts`, `partials`, and `stylesheets`.
 
 ```bash
 npm start
@@ -62,7 +62,7 @@ npm run spamcheck
 
 If you have a Litmus account, this makes it easier for you to fire off a test email to your [Litmus](https://litmus.com) account. Once you specify the Litmus test email address in `config.json` you're off to the races.
 
-**Important:** This test pulls emails from `dist_test` rather than `dist` because the CSS needs to be inlined to render an accurate test result on Litmus. The `dist_test` contents are generated from `dist` to accurately represent what Postmark would create before sending templates based on the contents of the `dist` folder.
+**Important:** This test pulls emails from `/dist/compiled` since the CSS needs to be inlined to render an accurate test result on Litmus.
 
 ```bash
 npm run litmus
@@ -70,10 +70,23 @@ npm run litmus
 
 ### Send All the Emails
 
-This will send a copy of each email in the `/emails` folder to your personal address. 
+This will send a copy of each email in the `/dist/compiled` folder to your personal address. 
 
 **Important:** If you have a lot of templates, this will send a lot of emails to your personal address. Use it wisely.
 
 ```bash
 npm run flood
 ```
+
+## Pushing templates to Postmark
+
+MailMason uses the [postmark-cli](https://github.com/wildbit/postmark-cli) tool to push your templates up to Postmark. Before getting started, ensure that you enter the Postmark server token of the destination server in `secrets.json`. 
+
+```bash
+npm run deploy
+```
+
+This command pushes the templates from `/dist/postmark-templates` and layouts from `/dist/postmark-layouts` up to Postmark. Templates in these folders do not have inlined CSS since Postmark handles this for you.
+
+You will also be asked to review and confirm your changes before pushing:
+![Postmark CLI confirmation](https://raw.githubusercontent.com/wildbit/postmark-cli/master/media/push-confirm.png) 
