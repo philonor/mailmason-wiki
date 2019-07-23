@@ -47,7 +47,7 @@ All of the following are pre-styled with simple clean and compatible styles.
 
 A very nice set of cross-client compatible and colored buttons are available and great to use for the primary desired actions of your email.
 
-Colors supported: blue, green, and red. (The precise colors can be tweaked in `/src/stylesheets/scss/_variables.scss`)
+Colors supported: blue, green, and red. (The precise colors can be tweaked in `/src/stylesheets/scss/_colors.scss`)
 
 ```html
 <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0">
