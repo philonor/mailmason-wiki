@@ -6,34 +6,39 @@ The source folder (`/src`) is the home for everything you'll need to edit on a r
 
 ```
 /src
-  /emails
   /images
   /layouts
   /partials
   /stylesheets
+  /templates
 ```
 
-### Emails
+### Templates
 
-The `/emails` folder is where you'll find the various types of emails. Each of these emails is designed based on a series of guides that we've written for each to discuss best practices and provide examples. Of course, we're planning on expanding both the guides and emails to include many more common templates, but we had to start somewhere.
+The `/templates` folder is where you'll find the various types of emails. Each of these emails is designed based on a series of guides that we've written that discusses the best practices and provide helpful examples.
 
-* example.hbs
-* comment_notification.hbs
-* invoice.hbs & receipt.hbs
-* reset_password.hbs & reset_password_alt.hbs
-* trial_expiring.hbs & trial_expired.hbs
-* user_invitation.hbs
-* welcome.hbs
+Templates are stored in their own separate folder along with a `meta.json` file for pushing it up to Postmark. The metadata file is only required if you plan on pushing your templates to Postmark. Here's an example of the JSON structure:
 
-For the most part, your `.hbs` files will be HTML with some Handlebars variables and partials, but each email will also need some YAML front matter to specify the layout, subject, and preheaders. You can use handlebars variables in these. Here's a sample to provide some context:
+```js
+{
+  "Name": "Invoice",
+  "Alias": "invoice",
+  "Subject": "Please pay {{ total }} due by {{ due_date }}",
+  "TemplateType": "Standard", // The type of template, either a "Standard" or "Layout"
+  "LayoutTemplate": "basic" // Layout alias
+}
+```
+
+For the most part, your `.hbs` files will be HTML with some Handlebars variables and partials, but each email will also need some YAML front matter to specify the layout and preheaders. You can use handlebars variables in these. Here's a sample to provide some context:
 
 ```yaml
 ---
-layout: layout.hbs
-subject: Please pay {{ total }} due for {{ product_name }}
+layout: plain/content.hbs
 preheader: This is an invoice for your purchase on {{ purchase_date }}. Please submit payment by {{ due_date }}
 ---
 ```
+
+This only changes the layout on the email templates that are compiled together under `/dist/compiled`. To specify a different layout on a template that is uploaded to Postmark, you must edit the `LayoutTemplate` field in the template's `meta.json` file so that it contains the layout's alias.
 
 ### Images
 
@@ -41,15 +46,33 @@ The images folder is pretty simple. If you want to use images in your emails, ma
 
 ### Layouts
 
-Layouts are your templates for each of the emails. If every email you have uses the same header and footer, then you'll probably only need a single layout. Since different emails have different purposes, you may want to have a few different layouts depending on the context of the emails.
+Layouts wrap your templates with a reusable wrapper for each of the emails. If every email you have uses the same header and footer, then you'll probably only need a single layout. Since different emails have different purposes, you may want to have a few different layouts depending on the context of the emails.
+
+MailMason comes with three different types of layouts to help you get up an running:
+<img src="https://github.com/wildbit/mailmason/raw/master/media/starter-templates@2x.png" max-width="100%" alt="Starter templates side-by-side: Basic full, basic, and plain">
+
+The layouts that come with MailMason also support dark mode on compatible email clients:
+<img src="https://github.com/wildbit/mailmason/raw/master/media/dark-mode@2x.png" alt="Dark mode compatible template">
+
+Layouts are stored in their own separate folder along with a meta.json file for pushing it up to Postmark. The metadata file is only required if you plan on pushing your templates to Postmark. Here's an example of the JSON structure:
+
+```js
+{
+  "Name": "Basic",
+  "Alias": "basic",
+  "TemplateType": "Layout" // The type of template, either a "Standard" or "Layout"
+}
+```
 
 You can specify which layout a given email uses in the YAML front matter of the email:
 
 ```yaml
 ---
-layout: layout.hbs
+layout: plain/content.hbs
 ---
 ```
+
+However, this only affects the templates that are compiled together under `/dist/compiled`. To specify a different layout on a template that is uploaded to Postmark, you must edit the `LayoutTemplate` field in the template's `meta.json` file so that it contains the layout's alias.
 
 ### Partials
 
@@ -63,10 +86,15 @@ If you have a `masthead.hbs` partial, you could use it in your emails like so...
 
 ### Stylesheets
 
-The stylesheets support SASS, and the pre-existing stylesheets use SCSS syntax with partials. They provide some basic organization and are joined via the `global.scss` file.
+The stylesheets support SASS, and the pre-existing stylesheets use SCSS syntax with partials. Each layout comes with its own separate stylesheet under `/src/stylesheets` that lets you style the layouts separately. 
 
 ## The Distribution Folder
 
 All of your HTML and text emails will end up in the `/dist` folder. They are constantly overwritten by the build process, so it's important not to make changes here if you want to keep them. Even though the distribution files are generated, we include them in the repository for easy access to the static results. These files in the `/dist` folder are what you'd use within Postmark. 
 
-**Note:** There's also a `/test_dist` folder. This folder is primarily for generating versions with the CSS fully-linlined so that Litmus tests are testing the most compatible versions.
+The `/dist` folder contains three top-level directories: `compiled`, `postmark-layouts`, `postmark-templates`, and `stylesheets`.  
+
+- `/dist/compiled` - Contains all of your templates with the layout combined. CSS is inlined by default so that you can upload them directory to your email service provider. These templates are also used for rendering [development previews](https://github.com/wildbit/mailmason/wiki/Development#the-previewer).
+- `/dist/postmark-layouts` - Contains all of your compiled layouts so that they are compatible with Postmark. This essentially converts the handlebars `{{body}}` tag to the [Postmark `{{{@content}}}` placeholder](https://postmarkapp.com/support/article/1172-using-postmark-layouts) so that the template content can be dynamically inserted. These are what get pushed up to Postmark when running the [`deploy` command](https://postmarkapp.com/support/article/1172-using-postmark-layouts).
+- `/dist/postmark-templates` - Contains all of your compiled templates so that they are compatible with Postmark. The `LayoutTemplate` in `meta.json` gets assigned to the template when pushing to Postmark via the [`deploy` command](https://postmarkapp.com/support/article/1172-using-postmark-layouts). The CSS is not inlined since Postmark handles this for you.
+- `/dist/stylesheets` - Contains all of your compiled stylesheets. 
