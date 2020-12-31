@@ -15,7 +15,7 @@ nvm install && nvm use
 npm install
 ```
 
-4) Install premailer and nokogiri gems
+4) Install premailer and nokogiri gems (ensure to have [`rbenv`](https://github.com/rbenv/rbenv) installed)
 ```bash
 gem install premailer
 gem install nokogiri
