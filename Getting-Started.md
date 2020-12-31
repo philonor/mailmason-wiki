@@ -1,9 +1,15 @@
-## Setup
+## Preliminaries
 
-1) Install [node version manager](https://github.com/creationix/nvm)
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+1. Ruby is installed (e.g. with [`rbenv`](https://github.com/rbenv/rbenv)
+   ```bash
+   ruby -v
+   ```
+1. [node version manager](https://github.com/creationix/nvm) is installed. Install with: 
+   ```bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   ```
+
+## Setup
 
 2) Install and use node version specified from `.nvmrc`.
 ```bash
@@ -15,7 +21,7 @@ nvm install && nvm use
 npm install
 ```
 
-4) Install premailer and nokogiri gems (ensure to have [`rbenv`](https://github.com/rbenv/rbenv) installed)
+4) Install premailer and nokogiri Ruby gems
 ```bash
 gem install premailer
 gem install nokogiri
