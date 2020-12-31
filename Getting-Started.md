@@ -11,30 +11,27 @@
 
 ## Setup
 
-2) Install and use node version specified from `.nvmrc`.
-```bash
-nvm install && nvm use
-```
+1. Install and use node version specified from `.nvmrc`.
+   ```bash
+   nvm install && nvm use
+   ```
+1. Install local dependencies
+   ```bash
+   npm install
+   ```
+1. Install premailer and nokogiri Ruby gems
+   ```bash
+   gem install premailer
+   gem install nokogiri
+   ```
+1. Create and edit `config.json` and `secrets.json` (Secrets are only necessary if you want to send test emails.)
 
-3) Install local dependencies
-```bash
-npm install
-```
+1. Start the build service that watches the `src` directory for changes and builds to `dist`.  
+   ```bash
+   npm start
+   ```
 
-4) Install premailer and nokogiri Ruby gems
-```bash
-gem install premailer
-gem install nokogiri
-```
-
-5) Create and edit `config.json` and `secrets.json` (Secrets are only necessary if you want to send test emails.)
-
-6) Start the build service that watches the `src` directory for changes and builds to `dist`.  
-```bash
-npm start
-```
-
-7) Open `previews.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
+1. Open `previews.html` in a browser. It provides a normal width and mobile device width view of both the HTML and text versions of each email for easy previewing and scanning.
 
 ## Configuration
 
