@@ -44,6 +44,7 @@ If you're not sending test emails through Postmark and don't want to upload any 
 
 ```javascript
 // Create a copy of this file as 'secrets.json'
+// IMPORTANT: Ensure to remove all comment lines starting with "//" as otherwise, they will break Grunt.
 
 {
   "ftp": {
@@ -76,6 +77,7 @@ The base project includes an `example_config.json` that you can copy and rename 
 
 ```javascript
 // Create a copy of this file as 'config.json'
+// IMPORTANT: Ensure to remove all comment lines starting with "//" as otherwise, they will break Grunt.
 
 {
   "postmark": {
